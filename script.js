@@ -50,23 +50,23 @@ function rezultats(){ // izvada rezultātu
     m1 = m.m1; m2 = m.m2; m3 = m.m3;
     console.log(m1, m2, m3);
         if (!nolasa()) { // ja kaut viens no malu garumiem ir nekorekts, rezultātu neizvada - izvada tekstu
-        t = "Nekorekti ievadīti dati. Trijstūra malu garumiem ir jābūt lielākiem par 0";
+        t = "Nekorekti ievadīti dati. Trijstūra malu garumiem ir jābūt lielākiem par 0. ";
     } else {
         if (irTrijsturis(m1, m2, m3)==false) {
-        t = "Trijstūris neeksistē, tāpēc ka ir jābūt izpildītai trijstūru nevienādībai - jebkuru divu malu garumu summai ir jābūt lielākai par trešo malu!";
+        t = "Trijstūris neeksistē, tāpēc ka ir jābūt izpildītai trijstūru nevienādībai - jebkuru divu malu garumu summai ir jābūt lielākai par trešo malu! ";
     } else {
-        t = "Trijstūris ar malu garumiem "+ m1 +", "+ m2 +" un "+ m3 +" eksistē."
+        t = "Trijstūris ar malu garumiem "+ m1 +", "+ m2 +" un "+ m3 +" eksistē. "
         if (m1==m2 && m2==m3) {
-        t += "Tas ir vienādmalu trijstūris."
+        t += "Tas ir vienādmalu trijstūris. "
     } else {
         if (m1 == m2 || m2 == m3 || m1 == m3) {
-        t += "Tas ir vienādsānu trijstūris."
+        t += "Tas ir vienādsānu trijstūris. "
 }
 }
 
     const p = perimetrs (m1, m2, m3); // izrēķinātais perimetrs
     const s = Math.round (laukums(m1, m2, m3) * 100) / 100; // izrēķinātais laukums un tp noapaļo ar 2 cipariem aiz komata
-    t += "Perimetrs ir "+ p +" un laukums ir "+ s +" . "; // izvada tekstu (tas + ir vajadzīgs, lai atkārtotos 1x un viss ekrāns nebūtu rezultātos)
+    t += "Trijstūra perimetrs ir "+ p +" un laukums ir "+ s +". "; // izvada tekstu (tas + ir vajadzīgs, lai atkārtotos 1x un viss ekrāns nebūtu rezultātos)
 } 
 }
 
